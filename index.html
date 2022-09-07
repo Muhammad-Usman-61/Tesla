@@ -4,9 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla" />
+    <meta property="og:type" content="website" />
     <title>Tesla</title>
+    <link
+      rel="shortcut icon"
+      href="images/tesla-icon.svg"
+      type="image/x-icon"
+      class="icon"
+    />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body id="main">
+    <header>
+      <nav class="nav collapsible">
+        <a href="/"
+          ><img
+            src="./images/tesla-logo.svg"
+            class="nav__logo"
+            alt="Tesla Logo"
+        /></a>
+        <img
+          class="icon icon--white nav__toggler"
+          src="./images/menu.svg"
+          alt=""
+        />
+
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#" id="modelS">Model S</a></li>
+          <li class="nav__item"><a href="#" id="model3">Model 3</a></li>
+          <li class="nav__item"><a href="#" id="modelX">Model X</a></li>
+          <li class="nav__item"><a href="#" id="modelY">Model Y</a></li>
+          <li class="nav__item"><a href="#" id="solarRoof">Solar Roof</a></li>
+          <li class="nav__item">
+            <a href="#" id="solarPanels">Solar Panels</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="block">
+      <div class="container">
+        <header class="block__header" id="central-content">
+          <h1 class="block__heading" id="model">Model S</h1>
+          <p class="block__tagline" id="content">Plaid</p>
+        </header>
+      </div>
+    </section>
+
+    <footer>
+      <section class="block footer" id="footer">
+        <div>
+          <h2 id="heading1">396 mi</h2>
+          <p id="p1">Range (EPA est.)</p>
+        </div>
+        <div>
+          <h2 id="heading2">1.99 s</h2>
+          <p id="p2">0-60 mph*</p>
+        </div>
+        <div>
+          <h2 id="heading3">200 mph</h2>
+          <p id="p3">Top Speed<sup>†</sup></p>
+        </div>
+        <div>
+          <h2 id="heading4">1,020 hp</h2>
+          <p id="p4">Peak Power</p>
+        </div>
+        <div class="button">
+          <a href="#" id="button">Order Now</a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
 </html>

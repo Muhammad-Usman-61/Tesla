@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background-image: url(../images/Model-S.webp);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    transition: background-image 1s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+    align-items: center;
+    pointer-events: none;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav__list {
+    width: 100%;
+    margin: 0;
+}
+
+.nav__logo {
+    object-fit: none;
+    width: 10rem;
+    height: 4rem;
+}
+
+.nav__item {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #777;
+    pointer-events: all;
+    font-weight: 500;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+
+.nav__toggler {
+    opacity: 0.5;
+    transition: box-shadow 0.15s;
+    cursor: pointer;
+
+    pointer-events: all;
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+    opacity: 1;
+    box-shadow: 0 0 0 3px #666;
+    border-radius: 5px;
+}
+
+
+.nav__item>a {
+    color: #000;
+    transition: color 0.3s;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon--white {
+    fill: #fff;
+}
+
+@media screen and (min-width: 800px) {
+
+    .nav {
+        pointer-events: all;
+    }
+
+    .nav__toggler {
+        display: none;
+    }
+
+    .nav__list {
+        width: auto;
+        display: flex;
+        font-size: 1.6rem;
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .nav__item {
+        border: 0;
+    }
+}
+
+.block {
+    padding: 6rem 2rem;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.block__header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.block__heading {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.block__tagline {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+
+    .block__header {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        padding: 1rem 1.6rem;
+    }
+
+    nav ul li a:hover {
+        background: rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 0;
+    align-items: center;
+    color: #fff;
+
+    font-size: 1.8rem;
+}
+
+.footer div p {
+    font-size: 1.4rem;
+    margin-top: 0;
+}
+
+.footer div h2 {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 0;
+        top: 70%;
+    }
+
+    .footer div h2 {
+        margin-top: 0;
+        font-size: 2.2rem;
+    }
+
+    .footer div p {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        grid-column: -3/-1;
+        margin-top: 20px;
+    }
+}
+
+
+.button a {
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    font-weight: 600;
+    padding: 1rem 5rem;
+    font-size: 1.6rem;
+}
+
+.button a:hover {
+    background: #fff;
+    color: #333 !important;
+}
