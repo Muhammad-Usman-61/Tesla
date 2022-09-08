@@ -10,12 +10,6 @@ html {
     box-sizing: border-box;
 }
 
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
 body {
     color: #000;
     font-size: 1.4rem;
@@ -74,7 +68,6 @@ a {
     transition: all 0.3s;
 }
 
-
 .nav__toggler {
     opacity: 0.5;
     transition: box-shadow 0.15s;
@@ -93,7 +86,6 @@ a {
     box-shadow: 0 0 0 3px #666;
     border-radius: 5px;
 }
-
 
 .nav__item>a {
     color: #000;
@@ -216,8 +208,10 @@ a {
         grid-column: -3/-1;
         margin-top: 20px;
     }
+    nav ul li a {
+        padding: 0.3rem 0.6rem;
+    }
 }
-
 
 .button a {
     color: #fff;
